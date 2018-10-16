@@ -17,15 +17,18 @@ def weathergen(A, B, C):
     e = 1
     print(chain)
     while i != 7:
-        print (chain[w][e])
         if random.randint(0,chain[w][e]) == chain[w][e]:
             print(chain[w][0])
-            print("STAY!")
-        elif random.randint(0,chain[w][e]) == chain[w][e+1]:
-            print("GO!")
-        elif random.randint(0,chain[w][e]) == chain[w][e+2]:
-            print("BACK!")
+            i += 1
+            random.shuffle(chain)
+        elif random.randint(0,chain[w][e+1]) == chain[w][e+1]:
+            print(chain[w+1][0])
+            i += 1
+            random.shuffle(chain)
+        elif random.randint(0,chain[w][e+2]) == chain[w][e+2]:
+            print(chain[w+2][0])
+            i += 1
+            random.shuffle(chain)
         else:
-            print("OH NO!")
-        i = i + 1
+            random.shuffle(chain)
 weathergen(clear, rain, snow)
