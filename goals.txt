@@ -1,0 +1,13 @@
+project abstract:
+	I know the basics of python scripting, so I decided to look for a programming challenge. I think I understand what Markov Chains are, but as you can see from the "dk" in the project name, I am assuming that I am very very wrong. My objective for this project is for the script to generate a "forecast" of weather using the principles of markov chains to make a random but mildly predictable pattern. 
+
+planning:
+	My main idea is to have each weather event to have a set chance of:
+		A. staying the same
+		B. progressing to the next weather event
+		C. going back to the previous weather event
+	I believe this implements the basic idea behind markov chains, and I think it will be effective
+
+potential issues:
+	How will the initial order of the weather events be set? Could the array be have a random order on execution?
+
