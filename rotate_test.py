@@ -6,3 +6,6 @@ print("rotate forward!")
 number[0], number[1], number[2] = number[1], number[2], number[0]
 print(number)
 #still need to setup rotate back!
+print("rotate back!")
+number[0], number[1], number[2] = number[2], number[0], number[1]
+print(number)

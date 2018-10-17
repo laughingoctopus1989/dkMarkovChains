@@ -20,20 +20,17 @@ def weathergen(A, B, C):
     i = 0 #increment counter
     w = 0 #weather event
     e = 1 #weather event data
-    print(chain) #prints the current chain info for debugging REMOVE LATER!!!
+    print("Current Weather Forceast: ")
     while i != 7:
         if random.randint(0,chain[w][e]) == chain[w][e]: #checks to stay
             print(chain[w][0]) #prints current weather event
             i += 1
-            random.shuffle(chain) # get rid of later!!!
         elif random.randint(0,chain[w][e+1]) == chain[w][e+1]: #checks to go
-            print(chain[w+1][0]) #prints next weather event
+            chain[0], chain[1], chain[2] = chain[1], chain[2], chain[0] #rotates array forward
+            print(chain[w][0]) #prints next weather event
             i += 1
-            random.shuffle(chain) #get rid of later!!!
-        elif random.randint(0,chain[w][e+2]) == chain[w][e+2]:
-            print(chain[w+2][0]) #prints last weather event
+        elif random.randint(0,chain[w][e+2]) == chain[w][e+2]: #checks to back
+            chain[0], chain[1], chain[2] = chain[2], chain[0], chain[1] #rotates array forward
+            print(chain[w][0]) #prints last weather event
             i += 1
-            random.shuffle(chain) #get rid of later!!!
-        else:
-            random.shuffle(chain) #get rid of later!!!
 weathergen(clear, rain, snow) #runs the fucntion lmao
