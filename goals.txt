@@ -10,4 +10,10 @@ planning:
 
 potential issues:
 	How will the initial order of the weather events be set? Could the array be have a random order on execution?
-
+issues in development:
+	The order wasn't really an issue as I just used random.shuffle at the beginning to ensure a random order, the 
+	real issue was finding a way to get the state to switch backwards and forwards inside of an array. Originally
+	I just put a bunch of shuffle functions because it was "good enough", but that's not really shifting 
+	backwards and forwards. I looked up and saw that you can do 'x, y = y, x' to shift variable values and realized I could do	  that to "rotate" the values, which is what rotate_test.py was used to test. 
+conclusion:
+	pretty fun project, learned some new stuff, 8/10.
